@@ -22,11 +22,7 @@ import {
 } from '@material-ui/icons'
 
  
-  const PagePromo = () => (
-  
-    <>
-    
-    <Wrapper>
+  const PagePromo = () => (<Wrapper>
     <PartnerPerformance icons={{
       Badges, 
       Presentation,
@@ -36,13 +32,8 @@ import {
       Meetups,
       Blog,
       Rollups
-    }}/>
-    </Wrapper>
-
-   
-    </>
-  
-  )
+    }} />
+</Wrapper>)
   
   
   export const getStaticProps = reduxWrapper.getStaticProps(async ({ store }) => {
