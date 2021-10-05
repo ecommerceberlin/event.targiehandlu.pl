@@ -22,9 +22,9 @@ const settings =  {
         menuItems : [
 
             {
-                name: 'general',
+                name: 'exhibitor',
                 items: [
-                  {name: 'home', to: '/'},
+                  {name: 'ranking', to: '/'},
                 ]
             }
   

@@ -4,7 +4,8 @@ import {
     configure,
     reduxWrapper,
     PartnerPromo,
-    Wrapper
+    Wrapper,
+    Markdown
   } from 'eventjuicer-site-components';
   
 
@@ -21,7 +22,8 @@ import {
     AssignmentInd as Rollups
 } from '@material-ui/icons'
 
- 
+
+
   const PageCompany = ({id}) => {
     
   return (
@@ -37,6 +39,9 @@ import {
       Blog,
       Rollups
     }} />
+
+    <Markdown label="exhibitor.promo.about" />
+
     </Wrapper>
   );
   
