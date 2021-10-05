@@ -4,8 +4,10 @@ import {
     configure,
     reduxWrapper,
     PartnerPromo,
+    PartnerPerformance,
     Wrapper,
-    Markdown
+    Markdown,
+    MyButton as Button
   } from 'eventjuicer-site-components';
   
 
@@ -38,7 +40,25 @@ import {
       Meetups,
       Blog,
       Rollups
-    }} />
+    }}
+    sidebar={
+      <div>
+      <PartnerPerformance icons={{
+        Badges, 
+        Presentation,
+        Video_interview,
+        Brand_highlight,
+        Earlybird,
+        Meetups,
+        Blog,
+        Rollups
+      }} 
+      limit={5}
+      />
+      <Button href="/" label="exhibitor.ranking.button" />
+      </div>
+    }
+    />
 
     <Markdown label="exhibitor.promo.about" />
 

@@ -25,7 +25,7 @@ import {
  
   const PagePromo = () => (<Wrapper>
 
-     <Markdown label="exhibitor.promo.about" />
+     <Markdown label="exhibitor.promo.about_short" />
 
     <PartnerPerformance icons={{
       Badges, 
