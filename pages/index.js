@@ -4,7 +4,8 @@ import {
     reduxWrapper,
     configure,
     PartnerPerformance,
-    Wrapper
+    Wrapper,
+    Markdown
   } from 'eventjuicer-site-components';
   
   import settings from '../settings';
@@ -23,6 +24,9 @@ import {
 
  
   const PagePromo = () => (<Wrapper>
+
+     <Markdown label="exhibitor.promo.about" />
+
     <PartnerPerformance icons={{
       Badges, 
       Presentation,
