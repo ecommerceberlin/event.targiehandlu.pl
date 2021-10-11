@@ -19,7 +19,7 @@ import {
     MonetizationOn as Earlybird,
     Event as Meetups,
     Description as Blog,
-    AssignmentInd as Rollups
+    VolumeUp as Rollups
 } from '@material-ui/icons'
 
  
