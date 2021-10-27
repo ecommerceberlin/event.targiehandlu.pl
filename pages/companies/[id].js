@@ -7,7 +7,9 @@ import {
     PartnerPerformance,
     Wrapper,
     Markdown,
-    MyButton as Button
+    MyButton as Button,
+    Box,
+    useSWR
   } from 'eventjuicer-site-components';
   
 
@@ -24,14 +26,29 @@ import {
     VolumeUp as Rollups
 } from '@material-ui/icons'
 
+const fetcher = url => fetch(url).then(r => r.json())
 
+const PhotosDownloadButton = ({id}) => {
+   const { data, error } = useSWR(`/api/companies/${id}`, fetcher)
+  if(error || !data || !("zip" in data)){
+    return null
+  }
+  return ( <Box m={2}>
+    <Button label="download" variant="contained" href={data.zip} size="large"  />
+    </Box>)
+  }
 
   const PageCompany = ({id}) => {
     
   return (
     <Wrapper>
 
-     <PartnerPromo id={id} icons={{
+     
+
+     <PartnerPromo 
+     show_points={false} 
+     id={id} 
+     icons={{
       Badges, 
       Presentation,
       Video_interview,
@@ -41,8 +58,21 @@ import {
       Blog,
       Rollups
     }}
-    sidebar={
-      <div>
+    start={
+    <PhotosDownloadButton id={id} />
+    }
+    sidebar={null }
+    />
+
+    <Markdown label="exhibitor.promo.about" />
+
+    </Wrapper>
+  );
+  
+  }
+
+/**   
+   <div>
       <PartnerPerformance icons={{
         Badges, 
         Presentation,
@@ -56,16 +86,8 @@ import {
       limit={5}
       />
       <Button href="/" label="exhibitor.ranking.button" />
-      </div>
-    }
-    />
-
-    <Markdown label="exhibitor.promo.about" />
-
-    </Wrapper>
-  );
-  
-  }
+  </div>
+*/
 
   export async function getStaticPaths() {
 

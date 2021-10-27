@@ -15,5 +15,5 @@ export default async function handler(req, res) {
         flatten_folders: true
     });
     
-    res.status(200).json(query)
+    res.status(200).json({zip: query})
 }

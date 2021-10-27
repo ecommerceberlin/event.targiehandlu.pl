@@ -36,7 +36,9 @@ import {
       Meetups,
       Blog,
       Rollups
-    }} />
+    }} 
+    show_points={false}
+    />
 </Wrapper>)
   
   
