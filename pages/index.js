@@ -27,7 +27,9 @@ import {
 
      <Markdown label="exhibitor.promo.about_short" />
 
-    <PartnerPerformance icons={{
+    <PartnerPerformance 
+    event_id={89} 
+    icons={{
       Badges, 
       Presentation,
       Video_interview,
@@ -37,7 +39,7 @@ import {
       Blog,
       Rollups
     }} 
-    show_points={false}
+    show_points={true}
     />
 </Wrapper>)
   
